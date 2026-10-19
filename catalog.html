@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Каталог картин — SMERD.ART, Ольга Смердова</title>
+    <meta
+      name="description"
+      content="Каталог картин Ольги Смердовой: живопись маслом, триптихи и диптихи. Заказ работ и картин по индивидуальному сюжету."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="catalog-hero">
+        <div class="inner">
+          <div class="nav">
+            <a class="brand" href="index.html">
+              <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+              <span>SMERD.ART</span>
+            </a>
+            <button
+              type="button"
+              class="nav__burger"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              data-menu-toggle
+            >
+              <span></span><span></span>
+            </button>
+            <nav class="nav__links" aria-label="Разделы сайта">
+              <a href="catalog.html" aria-current="page">Каталог</a>
+              <a href="index.html#painting">Живопись</a>
+              <a href="index.html#drawing">Рисунок</a>
+              <a href="index.html#about">Обо мне</a>
+              <a href="index.html#reviews">Отзывы</a>
+              <a class="nav__contact" href="#order">Заказать ↗</a>
+            </nav>
+          </div>
+
+          <div class="catalog-head">
+            <div class="stack-24">
+              <p class="kicker">Каталог / Живопись</p>
+              <h1 class="display display--88">Каталог работ</h1>
+            </div>
+            <p>
+              Картины, доступные для приобретения. Выберите работу и оставьте заявку — я свяжусь с вами, расскажу о цене, доставке и отвечу на вопросы.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main class="catalog">
+        <div class="inner">
+          <div class="catalog__bar">
+            <div class="filters" role="group" aria-label="Фильтр по сериям" data-filters>
+              <button type="button" aria-pressed="true" data-filter="all">Все</button>
+              <button type="button" aria-pressed="false" data-filter="seasons">Чувства времени</button>
+              <button type="button" aria-pressed="false" data-filter="atharrachadh">Atharrachadh</button>
+              <button type="button" aria-pressed="false" data-filter="union">Совместный цикл</button>
+            </div>
+            <p class="slider__count" data-catalog-count>6 работ</p>
+          </div>
+
+          <div class="catalog__grid">
+            <article class="work" data-category="seasons">
+              <a class="frame frame--work" href="assets/february.png" data-lightbox>
+                <img src="assets/february.png" alt="Триптих «Февраль», холст, масло, 2022–2023" loading="lazy" />
+              </a>
+              <div class="work__info">
+                <p class="kicker">Чувства времени · Зима</p>
+                <h2 class="display display--40">Февраль</h2>
+                <p class="note">Триптих, холст, масло<br />50×70 см; 100×70 см; 71,5×50 см · 2022–2023</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Цена по запросу</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Февраль"
+                  data-order-meta="Триптих, холст, масло, 50×70 см; 100×70 см; 71,5×50 см, 2022–2023"
+                >Заказать</button>
+              </div>
+            </article>
+
+            <article class="work" data-category="seasons">
+              <a class="frame frame--work" href="assets/spring.png" data-lightbox>
+                <img src="assets/spring.png" alt="«Весенняя пора», холст, масло, 2022–2023" loading="lazy" />
+              </a>
+              <div class="work__info">
+                <p class="kicker">Чувства времени · Весна</p>
+                <h2 class="display display--40">Весенняя пора</h2>
+                <p class="note">Холст, масло<br />116×55,5 см; 30×80 см ×3 · 2022–2023</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Цена по запросу</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Весенняя пора"
+                  data-order-meta="Холст, масло, 116×55,5 см; 30×80 см ×3, 2022–2023"
+                >Заказать</button>
+              </div>
+            </article>
+
+            <article class="work" data-category="seasons">
+              <a class="frame frame--work" href="assets/fatigue.png" data-lightbox>
+                <img src="assets/fatigue.png" alt="Триптих «Усталость», холст, масло, 2023" loading="lazy" />
+              </a>
+              <div class="work__info">
+                <p class="kicker">Чувства времени · Лето</p>
+                <h2 class="display display--40">Усталость</h2>
+                <p class="note">Триптих, холст, масло<br />100×50 см ×3 · 2023</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Цена по запросу</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Усталость"
+                  data-order-meta="Триптих, холст, масло, 100×50 см ×3, 2023"
+                >Заказать</button>
+              </div>
+            </article>
+
+            <article class="work" data-category="seasons">
+              <a class="frame frame--work" href="assets/dreamers.png" data-lightbox>
+                <img src="assets/dreamers.png" alt="Диптих «Мечтатели», холст, масло, 2022" loading="lazy" />
+              </a>
+              <div class="work__info">
+                <p class="kicker">Чувства времени · Осень</p>
+                <h2 class="display display--40">Мечтатели</h2>
+                <p class="note">Диптих, холст, масло<br />100×80 см ×2 · 2022</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Цена по запросу</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Мечтатели"
+                  data-order-meta="Диптих, холст, масло, 100×80 см ×2, 2022"
+                >Заказать</button>
+              </div>
+            </article>
+
+            <article class="work" data-category="atharrachadh">
+              <a class="frame frame--work" href="assets/atharrachadh.png" data-lightbox>
+                <img src="assets/atharrachadh.png" alt="Триптих Atharrachadh, холст, масло, 2024–2025" loading="lazy" />
+              </a>
+              <div class="work__info">
+                <p class="kicker">Проект на одноименную сюиту</p>
+                <h2 class="display display--40">Atharrachadh</h2>
+                <p class="note">Триптих, холст, масло<br />100×100 см ×3 · 2024–2025</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Цена по запросу</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Atharrachadh"
+                  data-order-meta="Триптих, холст, масло, 100×100 см ×3, 2024–2025"
+                >Заказать</button>
+              </div>
+            </article>
+
+            <article class="work" data-category="union">
+              <a class="frame frame--work" href="assets/other-spring.png" data-lightbox>
+                <img src="assets/other-spring.png" alt="«Дыхание иной весны», холст и масло, 2026" loading="lazy" />
+              </a>
+              <div class="work__info">
+                <p class="kicker">Совместно с Юлией Богомоловой</p>
+                <h2 class="display display--40">Дыхание иной весны</h2>
+                <p class="note">Холст, масло<br />80×100 см · 2026</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Цена по запросу</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Дыхание иной весны"
+                  data-order-meta="Холст, масло, 80×100 см, 2026"
+                >Заказать</button>
+              </div>
+            </article>
+
+            <article class="work work--custom" data-category="all">
+              <div class="work__placeholder">
+                <p class="display display--40">Картина или рисунок по вашему сюжету</p>
+              </div>
+              <div class="work__info">
+                <p class="kicker">На заказ</p>
+                <h2 class="display display--40">Индивидуальный заказ</h2>
+                <p class="note">Масло, акрил, гуашь, графика · Размер, сюжет и сроки — по договорённости</p>
+              </div>
+              <div class="work__foot">
+                <p class="work__price">Обсудим</p>
+                <button
+                  type="button"
+                  class="btn btn--small"
+                  data-order="Картина на заказ"
+                  data-order-meta="Индивидуальный сюжет, техника и размер по договорённости"
+                >Обсудить заказ</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+
+      <footer class="band band--footer" id="order">
+        <div class="inner">
+          <div class="footer__title">
+            <h2 class="display display--88">Не нашли подходящую работу?</h2>
+            <p class="kicker kicker--dark">Заказ / Москва</p>
+          </div>
+          <p class="order__lead">
+            Напишите — обсудим сюжет, размер, технику и сроки.
+          </p>
+          <div class="contacts">
+            <button
+              type="button"
+              class="btn btn--light"
+              data-order="Картина на заказ"
+              data-order-meta="Индивидуальный сюжет, техника и размер по договорённости"
+            >Заказать картину / рисунок</button>
+            <a class="display display--62 contact-mail" href="mailto:olga.smerdova@inbox.ru">olga.smerdova@inbox.ru ↗</a>
+          </div>
+          <div class="rule rule--dark"></div>
+          <div class="footer__end">
+            <a class="brand brand--muted" href="index.html">
+              <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+              <span>SMERD.ART · Ольга Смердова</span>
+            </a>
+            <a class="to-top" href="#top">Наверх ↑</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="order-dialog" aria-labelledby="order-title" data-order-dialog>
+      <form class="order-form" data-order-form>
+        <button type="button" class="round-btn order-form__close" aria-label="Закрыть" data-order-close>×</button>
+        <div class="stack-16">
+          <p class="kicker">Заявка на заказ</p>
+          <h2 class="display display--40" id="order-title" data-order-title>Картина</h2>
+          <p class="note" data-order-meta></p>
+        </div>
+        <label class="field">
+          <span>Ваше имя</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Телефон, e-mail или Telegram</span>
+          <input type="text" name="contact" autocomplete="email" required />
+        </label>
+        <label class="field">
+          <span>Комментарий</span>
+          <textarea name="message" rows="4" placeholder="Город доставки, вопросы, пожелания к заказу"></textarea>
+        </label>
+        <button type="submit" class="btn">Отправить заявку</button>
+        <p class="note" data-order-status>
+          Откроется почтовая программа с готовым письмом на olga.smerdova@inbox.ru.
+        </p>
+      </form>
+    </dialog>
+
+    <div class="menu" id="mobile-menu" aria-label="Меню" aria-hidden="true" inert data-menu>
+      <div class="inner menu__top">
+        <a class="brand" href="index.html">
+          <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+          <span>SMERD.ART</span>
+        </a>
+      </div>
+      <button type="button" class="menu__close" aria-label="Закрыть меню" data-menu-close>
+        <span></span><span></span>
+      </button>
+      <nav class="inner menu__links" aria-label="Разделы сайта">
+        <div class="menu__item"><a href="catalog.html" aria-current="page" style="--i: 0">Каталог</a></div>
+        <div class="menu__item"><a href="index.html#painting" style="--i: 1">Живопись</a></div>
+        <div class="menu__item"><a href="index.html#drawing" style="--i: 2">Рисунок</a></div>
+        <div class="menu__item"><a href="index.html#about" style="--i: 3">Обо мне</a></div>
+        <div class="menu__item"><a href="index.html#reviews" style="--i: 4">Отзывы</a></div>
+        <div class="menu__item"><a href="#order" style="--i: 5">Заказать ↗</a></div>
+      </nav>
+      <div class="inner menu__foot">
+        <p>© 2026 Ольга Смердова</p>
+        <a href="mailto:olga.smerdova@inbox.ru">Написать ↗</a>
+      </div>
+    </div>
+
+    <div class="lightbox" data-lightbox-root hidden>
+      <button type="button" class="lightbox__close round-btn" aria-label="Закрыть">×</button>
+      <img alt="" />
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+  </body>
+</html>
