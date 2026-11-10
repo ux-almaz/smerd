@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Оплата — SMERD.ART</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-payment="success">
+    <div class="page">
+      <header class="catalog-hero">
+        <div class="inner">
+          <div class="nav">
+            <a class="brand" href="index.html">
+              <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+              <span>SMERD.ART</span>
+            </a>
+            <a class="text-link" href="catalog.html">Каталог</a>
+          </div>
+          <div class="stack-24 payment-result" data-payment-success>
+            <p class="kicker">Оплата</p>
+            <h1 class="display display--80">Спасибо за заказ</h1>
+            <p>
+              Если оплата прошла, подтверждение придёт от платёжной системы. Я свяжусь с вами по телефону или в Telegram, чтобы договориться о передаче работы.
+            </p>
+            <a class="btn" href="catalog.html">Вернуться в каталог</a>
+            <p class="note">
+              Продавец: Смердова Ольга Сергеевна, г. Москва.<br />
+              <a href="tel:+79637844335">+7 (963) 784-43-35</a> · <a href="mailto:olga.smerd.art@gmail.com">olga.smerd.art@gmail.com</a><br />
+              <a href="offer.html">Оферта</a> · <a href="lessons.html">Занятия</a> · <a href="privacy.html">Конфиденциальность</a>
+            </p>
+          </div>
+          <div class="stack-24 payment-result" data-payment-fail hidden>
+            <p class="kicker">Оплата</p>
+            <h1 class="display display--80">Оплата не завершена</h1>
+            <p>Деньги не списаны. Работы остались в корзине — можно вернуться и попробовать ещё раз.</p>
+            <a class="btn" href="catalog.html">Вернуться в каталог</a>
+            <p class="note">
+              Продавец: Смердова Ольга Сергеевна, г. Москва.<br />
+              <a href="tel:+79637844335">+7 (963) 784-43-35</a> · <a href="mailto:olga.smerd.art@gmail.com">olga.smerd.art@gmail.com</a><br />
+              <a href="offer.html">Оферта</a> · <a href="lessons.html">Занятия</a> · <a href="privacy.html">Конфиденциальность</a>
+            </p>
+          </div>
+        </div>
+      </header>
+      <footer class="legal-foot">
+        <div class="inner">
+          <nav class="legal-links" aria-label="Документы">
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="offer.html">Публичная оферта</a>
+            <a href="lessons.html">Условия занятий</a>
+            <a href="consent.html">Согласие на обработку данных</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const failed = new URLSearchParams(location.search).get("result") === "fail";
+      document.body.dataset.payment = failed ? "fail" : "success";
+      document.querySelector("[data-payment-success]").hidden = failed;
+      document.querySelector("[data-payment-fail]").hidden = !failed;
+    </script>
+    <script src="data/works.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

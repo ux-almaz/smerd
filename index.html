@@ -8,12 +8,6 @@
       name="description"
       content="Ольга Смердова — художница и преподаватель. Живопись, академический рисунок, скетчинг. Картины и рисунки на заказ."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Inter:wght@400&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/styles.css" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
@@ -22,28 +16,41 @@
       <header class="hero">
         <div class="inner">
           <div class="nav">
-            <a class="brand" href="#top">
-              <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
-              <span>SMERD.ART</span>
-            </a>
-            <button
-              type="button"
-              class="nav__burger"
-              aria-label="Открыть меню"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-              data-menu-toggle
-            >
-              <span></span><span></span>
-            </button>
-            <nav class="nav__links" aria-label="Разделы сайта">
-              <a href="catalog.html">Каталог</a>
-              <a href="#painting">Живопись</a>
-              <a href="#drawing">Рисунок</a>
-              <a href="#about">Обо мне</a>
-              <a href="#reviews">Отзывы</a>
-              <a class="nav__contact" href="#order">Заказать ↗</a>
-            </nav>
+            <div class="nav__brand">
+              <a class="brand" href="#top">
+                <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+                <span>SMERD.ART</span>
+              </a>
+              <a class="vk" href="https://vk.ru/smerd_art" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path fill="currentColor" d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.474-.085.72-.576.72z"/>
+                </svg>
+              </a>
+            </div>
+            <div class="nav__end">
+              <nav class="nav__links" aria-label="Разделы сайта">
+                <a href="catalog.html">Каталог</a>
+                <a href="#painting">Живопись</a>
+                <a href="#drawing">Рисунок</a>
+                <a href="#about">Обо мне</a>
+                <a href="#reviews">Отзывы</a>
+                <a class="nav__contact" href="#order">Заказать ↗</a>
+              </nav>
+              <button type="button" class="nav__cart" data-cart-open>
+                <span>Корзина</span>
+                <span class="nav__cart-count" data-cart-count hidden>0</span>
+              </button>
+              <button
+                type="button"
+                class="nav__burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                data-menu-toggle
+              >
+                <span></span><span></span>
+              </button>
+            </div>
           </div>
 
           <div class="hero__body">
@@ -54,9 +61,8 @@
                 Пишу картины и рисую на заказ: живопись маслом, акрилом и гуашью, академический рисунок, скетчинг.
               </p>
               <div class="hero__actions">
-                <a class="btn" href="mailto:olga.smerdova@inbox.ru?subject=Заказ картины / рисунка">Заказать картину / рисунок</a>
-                <a class="text-link" href="#painting">Посмотреть работы ↓</a>
-                <a class="text-link" href="catalog.html">Каталог картин ↗</a>
+                <a class="btn" href="mailto:olga.smerd.art@gmail.com?subject=Заказ картины">Заказать картину</a>
+                <button type="button" class="btn btn--secondary" data-enroll-open>Записаться на занятие</button>
               </div>
             </div>
             <figure class="hero__art">
@@ -67,11 +73,14 @@
                 <p>«Мечтатели» / «Чувства времени»</p>
                 <p class="muted">2022</p>
               </figcaption>
+              <div class="buy-row">
+                <p class="work__price">100&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="dreamers">В корзину</button>
+              </div>
             </figure>
           </div>
 
           <div class="kicker-row hero__foot">
-            <p>Москва</p>
             <p>Листайте ↓</p>
           </div>
         </div>
@@ -145,6 +154,10 @@
                 <p>Темнота. Руки на пульсе. Дрожь в коленках. Плачь. Нечем дышать. Ты свой или чужой?!</p>
                 <p class="note">Орнаментальный пастиш на жестово в виде перепространств ДНК.</p>
                 <p class="note">Триптих, холст, масло<br />50×70 см; 100×70 см; 71,5×50 см<br />2022–2023 гг.</p>
+                <div class="buy-row">
+                  <p class="work__price">50&nbsp;000&nbsp;₽</p>
+                  <button type="button" class="btn btn--small" data-add="february">В корзину</button>
+                </div>
               </div>
             </article>
 
@@ -157,6 +170,10 @@
                 <p>Безразличие. Холод. Вид из окна на проезжающих и проходящих, выходящих из автобусов к метро работяг.. Каждый день. Без выходных. Это и называется жизнью?!</p>
                 <p class="note">Все есть элементы росписей с завитками в кобальте синем среднем — минимальность особенностей.</p>
                 <p class="note">Холст, масло, 116×55,5 см; 30×80 см ×3, 2022–2023 гг.</p>
+                <div class="buy-row">
+                  <p class="work__price">150&nbsp;000&nbsp;₽</p>
+                  <button type="button" class="btn btn--small" data-add="spring">В корзину</button>
+                </div>
               </div>
             </article>
 
@@ -169,6 +186,10 @@
                 <p>Глаза закрыть. Выровнять дыхание. Не ушедшая тоска. Кругом — цветет. А внутри — красная охра осени маячит, как в ленте застывшего сознания.</p>
                 <p class="display display--32">Какой ты вчера — сегодня — завтра?! Кажется, один и тот же.</p>
                 <p class="note">Триптих, холст, масло, 100×50 см ×3, 2023 г.</p>
+                <div class="buy-row">
+                  <p class="work__price">75&nbsp;000&nbsp;₽</p>
+                  <button type="button" class="btn btn--small" data-add="fatigue">В корзину</button>
+                </div>
               </div>
             </article>
 
@@ -182,6 +203,10 @@
                 <p>Пробираясь через хохломские травы, как через культурный код, пронизывающий всё материальное и нематериальное, пытаешься воскресить в душах веру во что-то хорошее, радостное, счастливое.</p>
                 <p class="display display--32">Мечтать, не теряя почвы под ногами!</p>
                 <p class="note">Диптих, холст, масло, 100×80 см ×2, 2022 г.</p>
+                <div class="buy-row">
+                  <p class="work__price">100&nbsp;000&nbsp;₽</p>
+                  <button type="button" class="btn btn--small" data-add="dreamers">В корзину</button>
+                </div>
               </div>
             </article>
           </div>
@@ -207,6 +232,10 @@
           <div class="split-400">
             <div class="listen-col">
               <p class="note note--dark">Триптих, холст, масло, 100×100 см ×3, 2024–2025 гг.</p>
+              <div class="buy-row buy-row--dark">
+                <p class="work__price">200&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="atharrachadh">В корзину</button>
+              </div>
               <a
                 class="listen"
                 href="https://youtu.be/rS5zDK7FHX8?si=cEyCf-ctzLQ6M2d4"
@@ -244,7 +273,7 @@
             </figure>
             <div class="stack-32">
               <p class="display display--40">
-                Заниматься совместным творчеством — это лучшая и самая глубокая форма близости.
+                Заниматься совместным творчеством — это лучшая и самая глубокая форма дружеской близости.
               </p>
               <p>
                 Мы много лет писали бок о бок в институтских мастерских и так привыкли к этому занятию, что и после окончания каждую неделю проводим время в этом симбиозе и общей творческой радости, дополняя и обогащая друг друга.
@@ -319,12 +348,171 @@
           </div>
           <div class="diary__title">
             <h2 class="display display--72">Работы студентов</h2>
-            <p class="diary__def">Рисунок, живопись и скетчинг — результаты занятий.</p>
+            <div class="stack-16">
+              <p class="diary__def">Рисунок, живопись и скетчинг — результаты занятий.</p>
+              <p class="note">Если вы родитель и хотите убрать работу ребёнка или подпись к ней, напишите на <a class="text-link" href="mailto:olga.smerd.art@gmail.com">olga.smerd.art@gmail.com</a>.</p>
+            </div>
           </div>
+          <div class="stack-32" data-more data-more-limit="6">
           <div class="gallery" data-gallery>
-            <div class="tile tile--empty">Фото скоро</div>
-            <div class="tile tile--empty">Фото скоро</div>
-            <div class="tile tile--empty">Фото скоро</div>
+            <figure class="tile">
+              <a href="assets/students/liza-e.webp" data-lightbox data-caption="Лиза Е, 9 лет. Уголь, сангина, А3">
+                <img src="assets/students/liza-e.webp" width="712" height="1024" alt="Лиза Е, 9 лет. Уголь, сангина, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Лиза Е, 9 лет</span><span class="note">Уголь, сангина · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/alla-k-1.webp" data-lightbox data-caption="Алла К, взрослая группа. Акварель, А3">
+                <img src="assets/students/alla-k-1.webp" width="1024" height="710" alt="Алла К, взрослая группа. Акварель, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Алла К, взрослая группа</span><span class="note">Акварель · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/galina-l.webp" data-lightbox data-caption="Галина Л, взрослая группа. Акварель, А3">
+                <img src="assets/students/galina-l.webp" width="740" height="1024" alt="Галина Л, взрослая группа. Акварель, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Галина Л, взрослая группа</span><span class="note">Акварель · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/irina-i.webp" data-lightbox data-caption="Ирина И., взрослая группа. Гуашь, А3">
+                <img src="assets/students/irina-i.webp" width="732" height="1024" alt="Ирина И., взрослая группа. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Ирина И., взрослая группа</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/alyona-h.webp" data-lightbox data-caption="Алёна Х, 10 лет. Гуашь, А3">
+                <img src="assets/students/alyona-h.webp" width="705" height="1024" alt="Алёна Х, 10 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Алёна Х, 10 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/elizaveta.webp" data-lightbox data-caption="Елизавета, 10 лет. Гуашь, А3">
+                <img src="assets/students/elizaveta.webp" width="669" height="1024" alt="Елизавета, 10 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Елизавета, 10 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/maryana-l.webp" data-lightbox data-caption="Марьяна Л, 9 лет. Гуашь, А3">
+                <img src="assets/students/maryana-l.webp" width="692" height="1024" alt="Марьяна Л, 9 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Марьяна Л, 9 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/german-t.webp" data-lightbox data-caption="Герман Т, 10 лет. Гуашь, А3">
+                <img src="assets/students/german-t.webp" width="721" height="1024" alt="Герман Т, 10 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Герман Т, 10 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/taisiya-k.webp" data-lightbox data-caption="Таисия К, 10 лет. Масляная пастель, А3">
+                <img src="assets/students/taisiya-k.webp" width="727" height="1024" alt="Таисия К, 10 лет. Масляная пастель, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Таисия К, 10 лет</span><span class="note">Масляная пастель · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/anna-s-1.webp" data-lightbox data-caption="Анна С, 11 лет. Гуашь, А3">
+                <img src="assets/students/anna-s-1.webp" width="1024" height="726" alt="Анна С, 11 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Анна С, 11 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/yaroslava.webp" data-lightbox data-caption="Ярослава, 12 лет. Графитный карандаш, акварель, А3">
+                <img src="assets/students/yaroslava.webp" width="1024" height="702" alt="Ярослава, 12 лет. Графитный карандаш, акварель, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Ярослава, 12 лет</span><span class="note">Графитный карандаш, акварель · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/ulyana-arina.webp" data-lightbox data-caption="Ульяна, 7 лет и Арина, 9 лет. Карандаш, А4">
+                <img src="assets/students/ulyana-arina.webp" width="1024" height="714" alt="Ульяна, 7 лет и Арина, 9 лет. Карандаш, формат А4" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Ульяна, 7 лет и Арина, 9 лет</span><span class="note">Карандаш · А4</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/aliya-a.webp" data-lightbox data-caption="Алия А, 9 лет. Цветной карандаш, черная ручка, А3">
+                <img src="assets/students/aliya-a.webp" width="721" height="1024" alt="Алия А, 9 лет. Цветной карандаш, черная ручка, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Алия А, 9 лет</span><span class="note">Цветной карандаш, черная ручка · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/liza.webp" data-lightbox data-caption="Лиза, 9 лет. Простой карандаш, А3">
+                <img src="assets/students/liza.webp" width="727" height="1024" alt="Лиза, 9 лет. Простой карандаш, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Лиза, 9 лет</span><span class="note">Простой карандаш · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/tatyana-a.webp" data-lightbox data-caption="Татьяна А, взрослая группа. Гуашь, А3">
+                <img src="assets/students/tatyana-a.webp" width="700" height="1024" alt="Татьяна А, взрослая группа. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Татьяна А, взрослая группа</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/darya-k.webp" data-lightbox data-caption="Дарья К, 10 лет. Простой карандаш, А3">
+                <img src="assets/students/darya-k.webp" width="1024" height="708" alt="Дарья К, 10 лет. Простой карандаш, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Дарья К, 10 лет</span><span class="note">Простой карандаш · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/timofey-g.webp" data-lightbox data-caption="Тимофей Г, 9 лет. Гуашь, А3">
+                <img src="assets/students/timofey-g.webp" width="702" height="1024" alt="Тимофей Г, 9 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Тимофей Г, 9 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/margarita-g.webp" data-lightbox data-caption="Маргарита Г., 12 лет. Гуашь, А3">
+                <img src="assets/students/margarita-g.webp" width="715" height="1024" alt="Маргарита Г., 12 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Маргарита Г., 12 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/olga-m.webp" data-lightbox data-caption="Ольга М, взрослая группа. Тушь, А4">
+                <img src="assets/students/olga-m.webp" width="708" height="1024" alt="Ольга М, взрослая группа. Тушь, формат А4" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Ольга М, взрослая группа</span><span class="note">Тушь · А4</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/galina-s-1.webp" data-lightbox data-caption="Галина С, взрослая группа. Гуашь, А3">
+                <img src="assets/students/galina-s-1.webp" width="693" height="1024" alt="Галина С, взрослая группа. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Галина С, взрослая группа</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/alexandra-zh.webp" data-lightbox data-caption="Александра Ж, 9 лет. Масляная пастель, А3">
+                <img src="assets/students/alexandra-zh.webp" width="711" height="1024" alt="Александра Ж, 9 лет. Масляная пастель, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Александра Ж, 9 лет</span><span class="note">Масляная пастель · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/alla-k-2.webp" data-lightbox data-caption="Алла К, взрослая группа. Акварель, А3">
+                <img src="assets/students/alla-k-2.webp" width="732" height="1024" alt="Алла К, взрослая группа. Акварель, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Алла К, взрослая группа</span><span class="note">Акварель · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/darya.webp" data-lightbox data-caption="Дарья, 10 лет. Гуашь, А4">
+                <img src="assets/students/darya.webp" width="732" height="1024" alt="Дарья, 10 лет. Гуашь, формат А4" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Дарья, 10 лет</span><span class="note">Гуашь · А4</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/ekaterina.webp" data-lightbox data-caption="Екатерина, 10 лет. Масляная пастель, А2">
+                <img src="assets/students/ekaterina.webp" width="781" height="1024" alt="Екатерина, 10 лет. Масляная пастель, формат А2" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Екатерина, 10 лет</span><span class="note">Масляная пастель · А2</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/galina-s-2.webp" data-lightbox data-caption="Галина С, взрослая группа. Гуашь, А3">
+                <img src="assets/students/galina-s-2.webp" width="724" height="1024" alt="Галина С, взрослая группа. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Галина С, взрослая группа</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/students/anna-s-2.webp" data-lightbox data-caption="Анна С, 11 лет. Гуашь, А3">
+                <img src="assets/students/anna-s-2.webp" width="709" height="1024" alt="Анна С, 11 лет. Гуашь, формат А3" loading="lazy" />
+              </a>
+              <figcaption class="tile__caption"><span>Анна С, 11 лет</span><span class="note">Гуашь · А3</span></figcaption>
+            </figure>
+          </div>
+          <button type="button" class="btn btn--secondary" data-more-toggle hidden aria-expanded="false">Показать ещё</button>
           </div>
         </div>
       </section>
@@ -349,9 +537,9 @@
               </figcaption>
             </figure>
             <div class="statement">
-              <p class="display display--64">Жизнь представляю, как игру</p>
+              <p class="display display--64">Рисование - это про радость<br />и утешение</p>
               <p>
-                Жизнь представляю, как игру, где каждый Персонаж наигрывает свою роль. Жизнь = конструкция Персонажа – все его взаимодействия с внешним миром, которые нацелены на понимание предназначения. Это всегда про внутреннюю работу души – той самой пустоты, которую нужно заполнить (кем/чем), чтобы не чувствовать одиночества. Одиночество перманентно.
+                Любая практика изобразительного искусства, вне зависимости от ориентации на жанровость, вид и технику, помогает осмыслить очень многое в материальном мире через имитацию объема на плоскости. В любом возрасте помогает сконцентрироваться на задаче, оторваться от гаджета и снять стресс.
               </p>
             </div>
           </div>
@@ -360,14 +548,14 @@
             <article class="practice">
               <div class="rule"></div>
               <p class="practice__num">01</p>
-              <h3 class="display display--36">Академический рисунок</h3>
-              <p>Конструкция, светотень, натура</p>
+              <h3 class="display display--36">Рисунок</h3>
+              <p>Натюрморт, портрет, пейзаж</p>
             </article>
             <article class="practice">
               <div class="rule"></div>
               <p class="practice__num">02</p>
               <h3 class="display display--36">Живопись</h3>
-              <p>Акрил, масло, гуашь</p>
+              <p>Акрил, масло, гуашь, акварель</p>
             </article>
             <article class="practice">
               <div class="rule"></div>
@@ -459,19 +647,104 @@
             </div>
           </div>
           <h2 class="display display--80">Что говорят</h2>
-          <div class="reviews__grid">
-            <blockquote class="review review--empty">
-              <p class="display display--32">Здесь появится отзыв.</p>
-              <footer class="note">Имя, город</footer>
-            </blockquote>
-            <blockquote class="review review--empty">
-              <p class="display display--32">Здесь появится отзыв.</p>
-              <footer class="note">Имя, город</footer>
-            </blockquote>
-            <blockquote class="review review--empty">
-              <p class="display display--32">Здесь появится отзыв.</p>
-              <footer class="note">Имя, город</footer>
-            </blockquote>
+          <div class="reviews__slider" data-reviews>
+            <div class="slider__bar reviews__bar">
+              <div class="slider__tabs" role="tablist" aria-label="Категории отзывов">
+                <button type="button" role="tab" id="reviews-tab-kids" aria-controls="reviews-panel-kids" aria-selected="true">Детские группы</button>
+                <button type="button" role="tab" id="reviews-tab-adults" aria-controls="reviews-panel-adults" aria-selected="false" tabindex="-1">Взрослые</button>
+                <button type="button" role="tab" id="reviews-tab-clients" aria-controls="reviews-panel-clients" aria-selected="false" tabindex="-1">Заказчики</button>
+              </div>
+              <div class="slider__nav">
+                <span class="slider__count" data-reviews-count>01 / 03</span>
+                <button type="button" class="round-btn" data-reviews-prev aria-label="Предыдущий отзыв" disabled>←</button>
+                <button type="button" class="round-btn" data-reviews-next aria-label="Следующий отзыв">→</button>
+              </div>
+            </div>
+            <div class="reviews__panels">
+            <div class="reviews__panel is-active" id="reviews-panel-kids" role="tabpanel" aria-labelledby="reviews-tab-kids" data-reviews-panel>
+              <p class="kicker reviews__panel-title">Детские группы</p>
+              <div class="reviews__track" data-reviews-track>
+                <blockquote class="review">
+                  <div>
+                    <p>Хочу выразить благодарность изостудии «Артос», в частности Ольге Сергеевне! Она мастер своего дела! У неё отличный подход к детям, изучение материала по теме, всё по делу. Занятия проходят очень интересно и душевно! Ольга Сергеевна со всеми детьми находит быстро контакт, и они её очень любят и ценят. Занятия проходят в уютной обстановке, при этом супер продуктивно. Дочка моя в восторге и с огромным удовольствием ходит и не пропускает занятия. Мы рады, что занимаемся у такого талантливого педагога! Всем рекомендую!</p>
+                  </div>
+                  <footer><cite>Лилия Б.</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Прошёл ещё один год занятий в изостудии «Артос». Очень много интересного было на занятиях с нашим любимым педагогом Ольгой Сергеевной. Благодаря её подходу к детям мой сын стремится быть и творить, и самое главное — не хочет бросать изостудию. Ему очень нравится, а нам, родителям, вдвойне. Большое спасибо Ольге Сергеевне за доброту, увлечённость своим делом и возможность увлекать за собой детей, вдохновлять. Как показывает практика, детей с любым уровнем способностей можно развить. Мы ценим способность Ольги Сергеевны создавать положительное влияние на личностное развитие наших детей и формирование их умения!</p>
+                  </div>
+                  <footer><cite>Вероника Н.</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Мои дети, 10 и 7 лет, посещают занятия с огромным удовольствием. Это интересно, познавательно, весело. Учит видеть окружающий мир и воплощать увиденное, придуманное, волшебное в рисунки, скульптуру и поделки народного творчества. Ольга Сергеевна как молодой педагог общается с ребятами по-дружески, являясь одновременно учителем и наставником. Особое спасибо за народное творчество и возвращение к «корням». На занятиях каждому ребёнку дают самовыражаться, не привязывают к определённому типу рисунка. На выставках, посвящённых определённой теме, видно, что каждый автор работает в своей оригинальной манере.</p>
+                  </div>
+                  <footer><cite>Елена Н.</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="reviews__panel" id="reviews-panel-adults" role="tabpanel" aria-labelledby="reviews-tab-adults" data-reviews-panel>
+              <p class="kicker reviews__panel-title">Взрослые</p>
+              <div class="reviews__track" data-reviews-track>
+                <blockquote class="review">
+                  <div>
+                    <p>Мне очень нравится наше пространство, где мы занимаемся живописью. Наш педагог Ольга Сергеевна, несмотря на свою молодость, грамотно и профессионально ведёт занятия. Она изо всех сил старается донести до нас тайны своего опыта и мастерства.</p>
+                  </div>
+                  <footer><cite>Сергей П.</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Ольга, спасибо за творческое вдохновение, полученное от Вас! Занятия рисованием подарили мне часы душевного мира: сосредоточившись исключительно на рисунке, научили по-другому видеть окружающий мир. А пожелать хочется продолжения наших занятий: даже у новичков, благодаря советам преподавателя, получается!</p>
+                  </div>
+                  <footer><cite>Галина М.</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Ольга Сергеевна, спасибо, что Вы занимаетесь таким нужным делом. Ольга — коммуникабельный человек. С ней очень приятно общаться. Она внимательна: на любой вопрос сразу же подходит и даёт объяснение. Если нужно внести коррективы, то Ольга Сергеевна делает это тактично, мягко, профессионально. И сразу замечаешь, что действительно недоработка. С исправлением становится лучше.</p>
+                  </div>
+                  <footer><cite>Таисия Д.</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="reviews__panel" id="reviews-panel-clients" role="tabpanel" aria-labelledby="reviews-tab-clients" data-reviews-panel>
+              <p class="kicker reviews__panel-title">Заказчики</p>
+              <div class="reviews__track" data-reviews-track>
+                <blockquote class="review">
+                  <div>
+                    <p>Ольга! Добрый день. Я под таким впечатлением — это какой-то божественный портрет. Мне прямо кажется, что я чувствую мягкость кудрей, что я могу их потрогать. Я вам так благодарна. Мужу очень понравилось, он тоже говорит, что круто. Я вас благодарю от всего сердца. Золотые у вас руки и светлая душа.</p>
+                  </div>
+                  <footer><cite>Анфиса</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Дорогая Оля, доброе утро! Сегодня открыли картину, спасибо вам большое! Столько любви и тепла от неё! Спасибо большое за чудесный бантик и эскиз. Всё так потрясающе! Обнимаю вас сердцем и душой, очень благодарю.</p>
+                  </div>
+                  <footer><cite>Анфиса</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Ольга — замечательный мастер! Ни на секунду не пожалела, что обратилась к ней! Заказывала портрет для мамы на день рождения. Получилось великолепно, результат превзошёл все ожидания! Работа качественная и выполнена очень быстро. Я очень рада и буду обращаться к ней ещё! Рекомендую всем!</p>
+                  </div>
+                  <footer><cite>Кристина</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Спасибо большое Ольге за великолепную работу! Картина была выполнена раньше обещанного срока, рисунок выполнен точь-в-точь, как я хотела. Я осталась довольна работой на 5+. Всем советую. Отличный художник.</p>
+                  </div>
+                  <footer><cite>Ольга</cite></footer>
+                </blockquote>
+                <blockquote class="review">
+                  <div>
+                    <p>Ну этот стиль в нашем мире всего одинакового очень привлекает, и свежесть такая! Потрясающе.</p>
+                  </div>
+                  <footer><cite>Юлия</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </section>
@@ -480,22 +753,28 @@
         <div class="inner">
           <div class="footer__title">
             <h2 class="display display--88">Хотите картину или рисунок?</h2>
-            <p class="kicker kicker--dark">Заказ / Москва</p>
           </div>
           <p class="order__lead">
             Напишите — обсудим сюжет, размер, технику и сроки.
           </p>
           <div class="contacts">
-            <a class="btn btn--light" href="mailto:olga.smerdova@inbox.ru?subject=Заказ картины / рисунка">Заказать картину / рисунок</a>
-            <a class="text-link text-link--light" href="catalog.html">Смотреть каталог картин ↗</a>
-            <a class="display display--62 contact-mail" href="mailto:olga.smerdova@inbox.ru">olga.smerdova@inbox.ru ↗</a>
+            <a class="btn btn--light" href="mailto:olga.smerd.art@gmail.com?subject=Заказ картины">Заказать картину</a>
+            <a class="display display--62 contact-mail" href="mailto:olga.smerd.art@gmail.com">olga.smerd.art@gmail.com ↗</a>
           </div>
           <div class="rule rule--dark"></div>
           <div class="footer__end">
-            <p class="brand brand--muted">
-              <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
-              <span>SMERD.ART · Ольга Смердова</span>
-            </p>
+            <div class="footer__meta">
+              <p class="brand brand--muted">
+                <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+                <span>SMERD.ART · Ольга Смердова</span>
+              </p>
+              <nav class="footer__legal" aria-label="Документы">
+                <a href="privacy.html">Конфиденциальность</a>
+                <a href="consent.html">Согласие</a>
+                <a href="offer.html">Оферта</a>
+                <a href="lessons.html">Занятия</a>
+              </nav>
+            </div>
             <a class="to-top" href="#top">Наверх ↑</a>
           </div>
         </div>
@@ -518,19 +797,71 @@
         <div class="menu__item"><a href="#drawing" style="--i: 2">Рисунок</a></div>
         <div class="menu__item"><a href="#about" style="--i: 3">Обо мне</a></div>
         <div class="menu__item"><a href="#reviews" style="--i: 4">Отзывы</a></div>
-        <div class="menu__item"><a href="#order" style="--i: 5">Заказать ↗</a></div>
+        <div class="menu__item"><button type="button" data-cart-open style="--i: 5">Корзина</button></div>
+        <div class="menu__item"><a href="#order" style="--i: 6">Заказать ↗</a></div>
       </nav>
       <div class="inner menu__foot">
         <p>© 2026 Ольга Смердова</p>
-        <a href="mailto:olga.smerdova@inbox.ru">Написать ↗</a>
+        <a href="privacy.html">Документы</a>
+        <a href="mailto:olga.smerd.art@gmail.com">Написать ↗</a>
       </div>
     </div>
+
+    <dialog class="order-dialog" aria-labelledby="enroll-title" data-enroll-dialog>
+      <form class="order-form" data-enroll-form>
+        <button type="button" class="round-btn order-form__close" aria-label="Закрыть" data-enroll-close>×</button>
+        <div class="stack-16">
+          <p class="kicker">Запись</p>
+          <h2 class="display display--40" id="enroll-title">На занятие</h2>
+        </div>
+        <fieldset class="choice">
+          <legend>Формат</legend>
+          <label class="choice__item">
+            <input type="radio" name="format" value="Очные занятия для детей, Москва" required />
+            <span>
+              Очные занятия для детей
+              <small>Москва</small>
+            </span>
+          </label>
+          <label class="choice__item">
+            <input type="radio" name="format" value="Групповые онлайн-занятия для взрослых" />
+            <span>
+              Групповые онлайн-занятия
+              <small>Для взрослых</small>
+            </span>
+          </label>
+        </fieldset>
+        <label class="field">
+          <span>Имя</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Номер телефона</span>
+          <input type="tel" name="phone" autocomplete="tel" required />
+        </label>
+        <label class="field">
+          <span>Telegram или почта</span>
+          <input type="text" name="contact" autocomplete="email" required />
+        </label>
+        <label class="agree">
+          <input type="checkbox" name="consent" value="yes" required />
+          <span>Мне есть 18 лет. Если запись для ребёнка, я родитель или законный представитель. Принимаю <a href="lessons.html" target="_blank" rel="noopener noreferrer">условия занятий</a> и даю <a href="consent.html#lessons" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a>.</span>
+        </label>
+        <button type="submit" class="btn">Отправить заявку</button>
+        <p class="note" data-enroll-status>
+          Откроется почтовая программа с готовым письмом на olga.smerd.art@gmail.com.
+        </p>
+      </form>
+    </dialog>
 
     <div class="lightbox" data-lightbox-root hidden>
       <button type="button" class="lightbox__close round-btn" aria-label="Закрыть">×</button>
       <img alt="" />
+      <p class="lightbox__caption" data-lightbox-caption></p>
     </div>
 
     <script src="js/main.js"></script>
+    <script src="data/works.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

@@ -8,12 +8,6 @@
       name="description"
       content="Каталог картин Ольги Смердовой: живопись маслом, триптихи и диптихи. Заказ работ и картин по индивидуальному сюжету."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Inter:wght@400&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/styles.css" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
@@ -26,24 +20,30 @@
               <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
               <span>SMERD.ART</span>
             </a>
-            <button
-              type="button"
-              class="nav__burger"
-              aria-label="Открыть меню"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-              data-menu-toggle
-            >
-              <span></span><span></span>
-            </button>
-            <nav class="nav__links" aria-label="Разделы сайта">
-              <a href="catalog.html" aria-current="page">Каталог</a>
-              <a href="index.html#painting">Живопись</a>
-              <a href="index.html#drawing">Рисунок</a>
-              <a href="index.html#about">Обо мне</a>
-              <a href="index.html#reviews">Отзывы</a>
-              <a class="nav__contact" href="#order">Заказать ↗</a>
-            </nav>
+            <div class="nav__end">
+              <nav class="nav__links" aria-label="Разделы сайта">
+                <a href="catalog.html" aria-current="page">Каталог</a>
+                <a href="index.html#painting">Живопись</a>
+                <a href="index.html#drawing">Рисунок</a>
+                <a href="index.html#about">Обо мне</a>
+                <a href="index.html#reviews">Отзывы</a>
+                <a class="nav__contact" href="#order">Заказать ↗</a>
+              </nav>
+              <button type="button" class="nav__cart" data-cart-open>
+                <span>Корзина</span>
+                <span class="nav__cart-count" data-cart-count hidden>0</span>
+              </button>
+              <button
+                type="button"
+                class="nav__burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                data-menu-toggle
+              >
+                <span></span><span></span>
+              </button>
+            </div>
           </div>
 
           <div class="catalog-head">
@@ -52,7 +52,7 @@
               <h1 class="display display--88">Каталог работ</h1>
             </div>
             <p>
-              Картины, доступные для приобретения. Выберите работу и оставьте заявку — я свяжусь с вами, расскажу о цене, доставке и отвечу на вопросы.
+              Оригиналы с ценой можно положить в корзину и оплатить на сайте. Каждая такая работа — в одном экземпляре. Доставка согласуется после оплаты.
             </p>
           </div>
         </div>
@@ -81,13 +81,8 @@
                 <p class="note">Триптих, холст, масло<br />50×70 см; 100×70 см; 71,5×50 см · 2022–2023</p>
               </div>
               <div class="work__foot">
-                <p class="work__price">Цена по запросу</p>
-                <button
-                  type="button"
-                  class="btn btn--small"
-                  data-order="Февраль"
-                  data-order-meta="Триптих, холст, масло, 50×70 см; 100×70 см; 71,5×50 см, 2022–2023"
-                >Заказать</button>
+                <p class="work__price">50&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="february">В корзину</button>
               </div>
             </article>
 
@@ -101,13 +96,8 @@
                 <p class="note">Холст, масло<br />116×55,5 см; 30×80 см ×3 · 2022–2023</p>
               </div>
               <div class="work__foot">
-                <p class="work__price">Цена по запросу</p>
-                <button
-                  type="button"
-                  class="btn btn--small"
-                  data-order="Весенняя пора"
-                  data-order-meta="Холст, масло, 116×55,5 см; 30×80 см ×3, 2022–2023"
-                >Заказать</button>
+                <p class="work__price">150&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="spring">В корзину</button>
               </div>
             </article>
 
@@ -121,13 +111,8 @@
                 <p class="note">Триптих, холст, масло<br />100×50 см ×3 · 2023</p>
               </div>
               <div class="work__foot">
-                <p class="work__price">Цена по запросу</p>
-                <button
-                  type="button"
-                  class="btn btn--small"
-                  data-order="Усталость"
-                  data-order-meta="Триптих, холст, масло, 100×50 см ×3, 2023"
-                >Заказать</button>
+                <p class="work__price">75&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="fatigue">В корзину</button>
               </div>
             </article>
 
@@ -141,13 +126,8 @@
                 <p class="note">Диптих, холст, масло<br />100×80 см ×2 · 2022</p>
               </div>
               <div class="work__foot">
-                <p class="work__price">Цена по запросу</p>
-                <button
-                  type="button"
-                  class="btn btn--small"
-                  data-order="Мечтатели"
-                  data-order-meta="Диптих, холст, масло, 100×80 см ×2, 2022"
-                >Заказать</button>
+                <p class="work__price">100&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="dreamers">В корзину</button>
               </div>
             </article>
 
@@ -161,13 +141,8 @@
                 <p class="note">Триптих, холст, масло<br />100×100 см ×3 · 2024–2025</p>
               </div>
               <div class="work__foot">
-                <p class="work__price">Цена по запросу</p>
-                <button
-                  type="button"
-                  class="btn btn--small"
-                  data-order="Atharrachadh"
-                  data-order-meta="Триптих, холст, масло, 100×100 см ×3, 2024–2025"
-                >Заказать</button>
+                <p class="work__price">200&nbsp;000&nbsp;₽</p>
+                <button type="button" class="btn btn--small" data-add="atharrachadh">В корзину</button>
               </div>
             </article>
 
@@ -230,14 +205,22 @@
               data-order="Картина на заказ"
               data-order-meta="Индивидуальный сюжет, техника и размер по договорённости"
             >Заказать картину / рисунок</button>
-            <a class="display display--62 contact-mail" href="mailto:olga.smerdova@inbox.ru">olga.smerdova@inbox.ru ↗</a>
+            <a class="display display--62 contact-mail" href="mailto:olga.smerd.art@gmail.com">olga.smerd.art@gmail.com ↗</a>
           </div>
           <div class="rule rule--dark"></div>
           <div class="footer__end">
-            <a class="brand brand--muted" href="index.html">
-              <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
-              <span>SMERD.ART · Ольга Смердова</span>
-            </a>
+            <div class="footer__meta">
+              <a class="brand brand--muted" href="index.html">
+                <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
+                <span>SMERD.ART · Ольга Смердова</span>
+              </a>
+              <nav class="footer__legal" aria-label="Документы">
+                <a href="privacy.html">Конфиденциальность</a>
+                <a href="consent.html">Согласие</a>
+                <a href="offer.html">Оферта</a>
+                <a href="lessons.html">Занятия</a>
+              </nav>
+            </div>
             <a class="to-top" href="#top">Наверх ↑</a>
           </div>
         </div>
@@ -264,9 +247,13 @@
           <span>Комментарий</span>
           <textarea name="message" rows="4" placeholder="Город доставки, вопросы, пожелания к заказу"></textarea>
         </label>
+        <label class="agree">
+          <input type="checkbox" name="consent" value="yes" required />
+          <span>Даю <a href="consent.html#request" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a>. Заявка не списывает оплату: условия индивидуального заказа описаны в <a href="offer.html#custom" target="_blank" rel="noopener noreferrer">оферте</a>.</span>
+        </label>
         <button type="submit" class="btn">Отправить заявку</button>
         <p class="note" data-order-status>
-          Откроется почтовая программа с готовым письмом на olga.smerdova@inbox.ru.
+          Откроется почтовая программа с готовым письмом на olga.smerd.art@gmail.com.
         </p>
       </form>
     </dialog>
@@ -287,11 +274,13 @@
         <div class="menu__item"><a href="index.html#drawing" style="--i: 2">Рисунок</a></div>
         <div class="menu__item"><a href="index.html#about" style="--i: 3">Обо мне</a></div>
         <div class="menu__item"><a href="index.html#reviews" style="--i: 4">Отзывы</a></div>
-        <div class="menu__item"><a href="#order" style="--i: 5">Заказать ↗</a></div>
+        <div class="menu__item"><button type="button" data-cart-open style="--i: 5">Корзина</button></div>
+        <div class="menu__item"><a href="#order" style="--i: 6">Заказать ↗</a></div>
       </nav>
       <div class="inner menu__foot">
         <p>© 2026 Ольга Смердова</p>
-        <a href="mailto:olga.smerdova@inbox.ru">Написать ↗</a>
+        <a href="privacy.html">Документы</a>
+        <a href="mailto:olga.smerd.art@gmail.com">Написать ↗</a>
       </div>
     </div>
 
@@ -302,5 +291,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/catalog.js"></script>
+    <script src="data/works.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

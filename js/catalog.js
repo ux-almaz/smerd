@@ -1,4 +1,4 @@
-const ORDER_EMAIL = "olga.smerdova@inbox.ru";
+const ORDER_EMAIL = "olga.smerd.art@gmail.com";
 
 const works = [...document.querySelectorAll(".work")];
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
@@ -69,6 +69,7 @@ form.addEventListener("submit", (event) => {
     "",
     `Имя: ${name.value.trim()}`,
     `Контакт: ${contact.value.trim()}`,
+    "Согласие на обработку персональных данных: да",
     message.value.trim() ? `\nКомментарий:\n${message.value.trim()}` : "",
   ]
     .filter((line, i, lines) => line !== "" || lines[i - 1] !== "")
