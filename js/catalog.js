@@ -60,6 +60,14 @@ dialog.addEventListener("click", (event) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const { name, contact, message } = form.elements;
+  const sentAt = new Intl.DateTimeFormat("ru-RU", {
+    timeZone: "Europe/Moscow",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date());
   const subject = `Заказ: «${selected.title}»`;
   const body = [
     "Здравствуйте, Ольга!",
@@ -69,6 +77,7 @@ form.addEventListener("submit", (event) => {
     "",
     `Имя: ${name.value.trim()}`,
     `Контакт: ${contact.value.trim()}`,
+    `Дата отправки: ${sentAt} (МСК)`,
     "Согласие на обработку персональных данных: да",
     message.value.trim() ? `\nКомментарий:\n${message.value.trim()}` : "",
   ]

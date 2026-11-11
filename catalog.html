@@ -8,7 +8,7 @@
       name="description"
       content="Каталог картин Ольги Смердовой: живопись маслом, триптихи и диптихи. Заказ работ и картин по индивидуальному сюжету."
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=lightbox" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -286,10 +286,15 @@
 
     <div class="lightbox" data-lightbox-root hidden>
       <button type="button" class="lightbox__close round-btn" aria-label="Закрыть">×</button>
-      <img alt="" />
+      <button type="button" class="lightbox__nav round-btn" data-lightbox-prev aria-label="Предыдущая работа">←</button>
+      <figure class="lightbox__figure">
+        <img alt="" />
+        <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+      </figure>
+      <button type="button" class="lightbox__nav round-btn" data-lightbox-next aria-label="Следующая работа">→</button>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=lightbox2"></script>
     <script src="js/catalog.js"></script>
     <script src="data/works.js"></script>
     <script src="js/cart.js"></script>

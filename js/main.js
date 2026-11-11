@@ -221,34 +221,77 @@ document.querySelectorAll("[data-reviews]").forEach((root) => {
 });
 
 const lightbox = document.querySelector("[data-lightbox-root]");
-const lightboxImg = lightbox.querySelector("img");
-const lightboxCaption = lightbox.querySelector("[data-lightbox-caption]");
 
-const closeLightbox = () => {
-  lightbox.hidden = true;
-  lightboxImg.removeAttribute("src");
-  if (lightboxCaption) lightboxCaption.textContent = "";
-  document.body.classList.remove("no-scroll");
-};
+if (lightbox) {
+  const lightboxImg = lightbox.querySelector("img");
+  const lightboxCaption = lightbox.querySelector("[data-lightbox-caption]");
+  const lightboxClose = lightbox.querySelector(".lightbox__close");
+  const lightboxPrev = lightbox.querySelector("[data-lightbox-prev]");
+  const lightboxNext = lightbox.querySelector("[data-lightbox-next]");
+  const lightboxLinks = [...document.querySelectorAll("[data-lightbox]")];
+  let lightboxGroup = [];
+  let lightboxIndex = 0;
 
-document.querySelectorAll("[data-lightbox]").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
+  const lightboxSiblings = (link) => {
+    const gallery = link.closest("[data-gallery]");
+    if (gallery) return [...gallery.querySelectorAll("[data-lightbox]")];
+    const scope = link.closest("section, main") || document;
+    return [...scope.querySelectorAll("[data-lightbox]")].filter((item) => !item.closest("[data-gallery]"));
+  };
+
+  const showLightbox = (index) => {
+    lightboxIndex = (index + lightboxGroup.length) % lightboxGroup.length;
+    const link = lightboxGroup[lightboxIndex];
     lightboxImg.src = link.getAttribute("href");
     lightboxImg.alt = link.querySelector("img")?.alt ?? "";
     if (lightboxCaption) lightboxCaption.textContent = link.dataset.caption || "";
-    lightbox.hidden = false;
-    document.body.classList.add("no-scroll");
+    const many = lightboxGroup.length > 1;
+    if (lightboxPrev) lightboxPrev.hidden = !many;
+    if (lightboxNext) lightboxNext.hidden = !many;
+  };
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    lightboxImg.removeAttribute("src");
+    if (lightboxCaption) lightboxCaption.textContent = "";
+    document.body.classList.remove("no-scroll");
+  };
+
+  lightboxLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      lightboxGroup = lightboxSiblings(link);
+      showLightbox(Math.max(0, lightboxGroup.indexOf(link)));
+      lightbox.hidden = false;
+      document.body.classList.add("no-scroll");
+    });
   });
-});
 
-lightbox.addEventListener("click", (event) => {
-  if (event.target !== lightboxImg) closeLightbox();
-});
+  lightboxClose?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeLightbox();
+  });
+  lightboxPrev?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showLightbox(lightboxIndex - 1);
+  });
+  lightboxNext?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showLightbox(lightboxIndex + 1);
+  });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
-});
+  lightbox.addEventListener("click", (event) => {
+    if (event.target.closest("button") || event.target === lightboxImg) return;
+    closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") showLightbox(lightboxIndex - 1);
+    if (event.key === "ArrowRight") showLightbox(lightboxIndex + 1);
+  });
+}
 
 const enrollDialog = document.querySelector("[data-enroll-dialog]");
 
@@ -274,6 +317,14 @@ if (enrollDialog) {
   enrollForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const { format, name, phone, contact } = enrollForm.elements;
+    const sentAt = new Intl.DateTimeFormat("ru-RU", {
+      timeZone: "Europe/Moscow",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date());
     const subject = "Запись на занятие";
     const body = [
       "Здравствуйте, Ольга!",
@@ -283,6 +334,7 @@ if (enrollDialog) {
       `Имя: ${name.value.trim()}`,
       `Телефон: ${phone.value.trim()}`,
       `Telegram или почта: ${contact.value.trim()}`,
+      `Дата отправки: ${sentAt} (МСК)`,
       "Согласие на обработку персональных данных: да",
       "Подтверждено: отправителю есть 18 лет; для детской записи он родитель или законный представитель.",
     ].join("\n");

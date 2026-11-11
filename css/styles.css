@@ -695,45 +695,73 @@ figure.tile {
   position: fixed;
   inset: 0;
   z-index: 50;
-  display: grid;
-  place-items: center;
-  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 72px 20px 24px;
   background: rgba(37, 40, 36, 0.94);
   cursor: zoom-out;
+  overflow: hidden;
 }
 
 .lightbox[hidden] {
   display: none;
 }
 
-.lightbox img {
-  max-width: 100%;
+.lightbox__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  max-width: calc(100vw - 160px);
   max-height: 100%;
+}
+
+.lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 120px);
+  max-height: calc(100dvh - 120px);
   object-fit: contain;
+  object-position: center;
   cursor: default;
 }
 
 .lightbox__caption {
-  position: absolute;
-  left: 48px;
-  right: 88px;
-  bottom: 20px;
+  max-width: 100%;
   color: var(--cream);
   font-size: 14px;
   line-height: 1.4;
+  text-align: center;
 }
 
 .lightbox__caption:empty {
   display: none;
 }
 
+.lightbox__close,
+.lightbox__nav {
+  flex-shrink: 0;
+  border-color: var(--dark-muted);
+  color: var(--cream);
+}
+
 .lightbox__close {
   position: absolute;
   top: 20px;
   right: 20px;
-  border-color: var(--dark-muted);
-  color: var(--cream);
   font-size: 22px;
+}
+
+.lightbox__nav[hidden] {
+  visibility: hidden;
 }
 
 .no-scroll {
@@ -1833,6 +1861,29 @@ figure.tile {
   .kicker-row { flex-direction: column; gap: 6px; }
   .footer__title,
   .footer__end { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .lightbox {
+    gap: 0;
+    padding: 64px 12px 20px;
+  }
+
+  .lightbox__figure {
+    max-width: calc(100vw - 24px);
+  }
+
+  .lightbox img {
+    max-height: calc(100vh - 108px);
+    max-height: calc(100dvh - 108px);
+  }
+
+  .lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox__nav[data-lightbox-prev] { left: 8px; }
+  .lightbox__nav[data-lightbox-next] { right: 8px; }
+
   .legal { padding: 32px 0 64px; }
   .legal__layout { grid-template-columns: 1fr; gap: 28px; }
   .legal__nav { position: static; flex-direction: row; flex-wrap: wrap; gap: 8px 16px; }

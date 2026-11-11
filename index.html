@@ -8,7 +8,7 @@
       name="description"
       content="Ольга Смердова — художница и преподаватель. Живопись, академический рисунок, скетчинг. Картины и рисунки на заказ."
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=lightbox" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -308,12 +308,60 @@
           <div class="gallery-block">
             <div class="gallery-block__head">
               <h3 class="display display--40">Академический рисунок</h3>
-              <p class="note">Бумага, графитный карандаш, уголь</p>
+              <p class="note">Бумага, графитный карандаш, уголь, сангина</p>
             </div>
-            <div class="gallery" data-gallery>
-              <div class="tile tile--empty">Фото скоро</div>
-              <div class="tile tile--empty">Фото скоро</div>
-              <div class="tile tile--empty">Фото скоро</div>
+            <div class="stack-24" data-more data-more-limit="3">
+              <div class="gallery" data-gallery>
+                <figure class="tile">
+                  <a href="assets/drawing/officer.jpg" data-lightbox data-caption="Офицер. Бумага, уголь, сангина">
+                    <img src="assets/drawing/officer.jpg" width="865" height="1024" alt="Академический рисунок: офицер в красном мундире, бумага, уголь, сангина" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Офицер</span><span class="note">Уголь, сангина</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/portrait.jpg" data-lightbox data-caption="Портрет. Бумага, графитный карандаш">
+                    <img src="assets/drawing/portrait.jpg" width="576" height="1024" alt="Академический рисунок: женский портрет, бумага, графитный карандаш" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Портрет</span><span class="note">Графитный карандаш</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/laocoon.jpg" data-lightbox data-caption="Торс Лаокоона, копия. 2019. Бумага, графитный карандаш">
+                    <img src="assets/drawing/laocoon.jpg" width="720" height="1024" alt="Копия: торс Лаокоона, 2019, бумага, графитный карандаш" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Торс Лаокоона, копия</span><span class="note">Карандаш · 2019</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/bust.jpg" data-lightbox data-caption="Бюст в шлеме. 2019. Бумага, сангина">
+                    <img src="assets/drawing/bust.jpg" width="762" height="1024" alt="Академический рисунок: бюст в шлеме, 2019, бумага, сангина" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Бюст в шлеме</span><span class="note">Сангина · 2019</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/spear.jpg" data-lightbox data-caption="Натура со копьём. 2020. Бумага, уголь">
+                    <img src="assets/drawing/spear.jpg" width="733" height="1024" alt="Академический рисунок: сидящая натура со копьём, 2020, бумага, уголь" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Натура со копьём</span><span class="note">Уголь · 2020</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/hood.jpg" data-lightbox data-caption="Драпировка. Бумага, графитный карандаш">
+                    <img src="assets/drawing/hood.jpg" width="713" height="1024" alt="Академический рисунок: фигура в драпировке с капюшоном, бумага, графитный карандаш" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Драпировка</span><span class="note">Графитный карандаш</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/draped-figure.jpg" data-lightbox data-caption="Сидящая фигура в драпировке. Бумага, уголь">
+                    <img src="assets/drawing/draped-figure.jpg" width="859" height="1024" alt="Академический рисунок: сидящая фигура в драпировке, бумага, уголь" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Сидящая фигура</span><span class="note">Уголь</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/drawing/drapery.jpg" data-lightbox data-caption="Этюд драпировки. Бумага, уголь">
+                    <img src="assets/drawing/drapery.jpg" width="1024" height="576" alt="Академический рисунок: этюд драпировки, бумага, уголь" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>Этюд драпировки</span><span class="note">Уголь</span></figcaption>
+                </figure>
+              </div>
+              <button type="button" class="btn btn--secondary" data-more-toggle hidden aria-expanded="false">Показать ещё</button>
             </div>
           </div>
 
@@ -322,16 +370,412 @@
               <h3 class="display display--40">Арт-дневник</h3>
               <p class="note">Распадающиеся чернила, темпера, линер, маркеры, акриловая тушь. 2025–2026</p>
             </div>
-            <div class="gallery" data-gallery>
-              <a class="tile" href="assets/diary.png" data-lightbox>
-                <img src="assets/diary.png" alt="Страницы арт-дневника" loading="lazy" />
-              </a>
-              <a class="tile" href="assets/diary-pack.png" data-lightbox>
-                <img src="assets/diary-pack.png" alt="Арт-дневник на упаковочной бумаге" loading="lazy" />
-              </a>
-              <a class="tile" href="assets/diary-blue.png" data-lightbox>
-                <img src="assets/diary-blue.png" alt="Арт-дневник, синяя акриловая тушь" loading="lazy" />
-              </a>
+            <div class="stack-24" data-more data-more-limit="3">
+              <div class="gallery" data-gallery>
+                <figure class="tile">
+                  <a href="assets/diary/2026-05-30.jpg" data-lightbox data-caption="30.05.2026">
+                    <img src="assets/diary/2026-05-30.jpg" width="731" height="1024" alt="Лист арт-дневника, 30.05.2026" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>30.05.2026</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-06-01.jpg" data-lightbox data-caption="01.06.2025">
+                    <img src="assets/diary/2025-06-01.jpg" width="735" height="1024" alt="Лист арт-дневника, 01.06.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>01.06.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-31.jpg" data-lightbox data-caption="31.05.2025">
+                    <img src="assets/diary/2025-05-31.jpg" width="740" height="1024" alt="Лист арт-дневника, 31.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>31.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-28.jpg" data-lightbox data-caption="28.05.2025">
+                    <img src="assets/diary/2025-05-28.jpg" width="731" height="1024" alt="Лист арт-дневника, 28.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>28.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-27.jpg" data-lightbox data-caption="27.05.2025">
+                    <img src="assets/diary/2025-05-27.jpg" width="710" height="1024" alt="Лист арт-дневника, 27.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>27.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-26.jpg" data-lightbox data-caption="26.05.2025">
+                    <img src="assets/diary/2025-05-26.jpg" width="740" height="1024" alt="Лист арт-дневника, 26.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>26.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-25a.jpg" data-lightbox data-caption="25.05.2025">
+                    <img src="assets/diary/2025-05-25a.jpg" width="719" height="1024" alt="Лист арт-дневника, 25.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>25.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-25b.jpg" data-lightbox data-caption="25.05.2025">
+                    <img src="assets/diary/2025-05-25b.jpg" width="750" height="1024" alt="Лист арт-дневника, 25.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>25.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-24.jpg" data-lightbox data-caption="24.05.2025">
+                    <img src="assets/diary/2025-05-24.jpg" width="731" height="1024" alt="Лист арт-дневника, 24.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>24.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-23.jpg" data-lightbox data-caption="23.05.2025">
+                    <img src="assets/diary/2025-05-23.jpg" width="731" height="1024" alt="Лист арт-дневника, 23.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>23.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-22.jpg" data-lightbox data-caption="22.05.2025">
+                    <img src="assets/diary/2025-05-22.jpg" width="705" height="1024" alt="Лист арт-дневника, 22.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>22.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-21.jpg" data-lightbox data-caption="21.05.2025">
+                    <img src="assets/diary/2025-05-21.jpg" width="682" height="1024" alt="Лист арт-дневника, 21.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>21.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-20.jpg" data-lightbox data-caption="20.05.2025">
+                    <img src="assets/diary/2025-05-20.jpg" width="715" height="1024" alt="Лист арт-дневника, 20.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>20.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-19.jpg" data-lightbox data-caption="19.05.2025">
+                    <img src="assets/diary/2025-05-19.jpg" width="712" height="1024" alt="Лист арт-дневника, 19.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>19.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-18.jpg" data-lightbox data-caption="18.05.2025">
+                    <img src="assets/diary/2025-05-18.jpg" width="1024" height="1018" alt="Лист арт-дневника, 18.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>18.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-17a.jpg" data-lightbox data-caption="17.05.2025">
+                    <img src="assets/diary/2025-05-17a.jpg" width="995" height="1024" alt="Лист арт-дневника, 17.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>17.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-17b.jpg" data-lightbox data-caption="17.05.2025">
+                    <img src="assets/diary/2025-05-17b.jpg" width="977" height="1024" alt="Лист арт-дневника, 17.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>17.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-16.jpg" data-lightbox data-caption="16.05.2025">
+                    <img src="assets/diary/2025-05-16.jpg" width="1013" height="1024" alt="Лист арт-дневника, 16.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>16.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-15.jpg" data-lightbox data-caption="15.05.2025">
+                    <img src="assets/diary/2025-05-15.jpg" width="710" height="1024" alt="Лист арт-дневника, 15.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>15.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-14.jpg" data-lightbox data-caption="14.05.2025">
+                    <img src="assets/diary/2025-05-14.jpg" width="697" height="1024" alt="Лист арт-дневника, 14.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>14.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-13.jpg" data-lightbox data-caption="13.05.2025">
+                    <img src="assets/diary/2025-05-13.jpg" width="671" height="1024" alt="Лист арт-дневника, 13.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>13.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-12.jpg" data-lightbox data-caption="12.05.2025">
+                    <img src="assets/diary/2025-05-12.jpg" width="682" height="1024" alt="Лист арт-дневника, 12.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>12.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-11a.jpg" data-lightbox data-caption="11.05.2025">
+                    <img src="assets/diary/2025-05-11a.jpg" width="1024" height="1014" alt="Лист арт-дневника, 11.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>11.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-11b.jpg" data-lightbox data-caption="11.05.2025">
+                    <img src="assets/diary/2025-05-11b.jpg" width="1024" height="1016" alt="Лист арт-дневника, 11.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>11.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-10.jpg" data-lightbox data-caption="10.05.2025">
+                    <img src="assets/diary/2025-05-10.jpg" width="1010" height="1024" alt="Лист арт-дневника, 10.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>10.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-09.jpg" data-lightbox data-caption="09.05.2025">
+                    <img src="assets/diary/2025-05-09.jpg" width="1024" height="1015" alt="Лист арт-дневника, 09.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>09.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-08a.jpg" data-lightbox data-caption="08.05.2025">
+                    <img src="assets/diary/2025-05-08a.jpg" width="1024" height="1012" alt="Лист арт-дневника, 08.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>08.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-08b.jpg" data-lightbox data-caption="08.05.2025">
+                    <img src="assets/diary/2025-05-08b.jpg" width="1024" height="1010" alt="Лист арт-дневника, 08.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>08.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-08c.jpg" data-lightbox data-caption="08.05.2025">
+                    <img src="assets/diary/2025-05-08c.jpg" width="1023" height="1024" alt="Лист арт-дневника, 08.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>08.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-07.jpg" data-lightbox data-caption="07.05.2025">
+                    <img src="assets/diary/2025-05-07.jpg" width="1024" height="1010" alt="Лист арт-дневника, 07.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>07.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-05a.jpg" data-lightbox data-caption="05.05.2025">
+                    <img src="assets/diary/2025-05-05a.jpg" width="1024" height="1018" alt="Лист арт-дневника, 05.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>05.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-05b.jpg" data-lightbox data-caption="05.05.2025">
+                    <img src="assets/diary/2025-05-05b.jpg" width="993" height="1024" alt="Лист арт-дневника, 05.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>05.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-04a.jpg" data-lightbox data-caption="04.05.2025">
+                    <img src="assets/diary/2025-05-04a.jpg" width="1024" height="1019" alt="Лист арт-дневника, 04.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>04.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-04b.jpg" data-lightbox data-caption="04.05.2025">
+                    <img src="assets/diary/2025-05-04b.jpg" width="1024" height="1007" alt="Лист арт-дневника, 04.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>04.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-04c.jpg" data-lightbox data-caption="04.05.2025">
+                    <img src="assets/diary/2025-05-04c.jpg" width="1024" height="991" alt="Лист арт-дневника, 04.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>04.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-03a.jpg" data-lightbox data-caption="03.05.2025">
+                    <img src="assets/diary/2025-05-03a.jpg" width="1024" height="1011" alt="Лист арт-дневника, 03.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>03.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-03b.jpg" data-lightbox data-caption="03.05.2025">
+                    <img src="assets/diary/2025-05-03b.jpg" width="1004" height="1024" alt="Лист арт-дневника, 03.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>03.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-03c.jpg" data-lightbox data-caption="03.05.2025">
+                    <img src="assets/diary/2025-05-03c.jpg" width="1024" height="1024" alt="Лист арт-дневника, 03.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>03.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-02a.jpg" data-lightbox data-caption="02.05.2025">
+                    <img src="assets/diary/2025-05-02a.jpg" width="1012" height="1024" alt="Лист арт-дневника, 02.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>02.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-02b.jpg" data-lightbox data-caption="02.05.2025">
+                    <img src="assets/diary/2025-05-02b.jpg" width="1010" height="1024" alt="Лист арт-дневника, 02.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>02.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-05-02c.jpg" data-lightbox data-caption="02.05.2025">
+                    <img src="assets/diary/2025-05-02c.jpg" width="1008" height="1024" alt="Лист арт-дневника, 02.05.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>02.05.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-30.jpg" data-lightbox data-caption="30.04.2025">
+                    <img src="assets/diary/2025-04-30.jpg" width="707" height="1024" alt="Лист арт-дневника, 30.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>30.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-28.jpg" data-lightbox data-caption="28.04.2025">
+                    <img src="assets/diary/2025-04-28.jpg" width="696" height="1024" alt="Лист арт-дневника, 28.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>28.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-26.jpg" data-lightbox data-caption="26.04.2025">
+                    <img src="assets/diary/2025-04-26.jpg" width="689" height="1024" alt="Лист арт-дневника, 26.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>26.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-24.jpg" data-lightbox data-caption="24.04.2025">
+                    <img src="assets/diary/2025-04-24.jpg" width="711" height="1024" alt="Лист арт-дневника, 24.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>24.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-22.jpg" data-lightbox data-caption="22.04.2025">
+                    <img src="assets/diary/2025-04-22.jpg" width="682" height="1024" alt="Лист арт-дневника, 22.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>22.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-21.jpg" data-lightbox data-caption="21.04.2025">
+                    <img src="assets/diary/2025-04-21.jpg" width="682" height="1024" alt="Лист арт-дневника, 21.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>21.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-20.jpg" data-lightbox data-caption="20.04.2025">
+                    <img src="assets/diary/2025-04-20.jpg" width="686" height="1024" alt="Лист арт-дневника, 20.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>20.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-19.jpg" data-lightbox data-caption="19.04.2025">
+                    <img src="assets/diary/2025-04-19.jpg" width="702" height="1024" alt="Лист арт-дневника, 19.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>19.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-18.jpg" data-lightbox data-caption="18.04.2025">
+                    <img src="assets/diary/2025-04-18.jpg" width="693" height="1024" alt="Лист арт-дневника, 18.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>18.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-17.jpg" data-lightbox data-caption="17.04.2025">
+                    <img src="assets/diary/2025-04-17.jpg" width="682" height="1024" alt="Лист арт-дневника, 17.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>17.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-16.jpg" data-lightbox data-caption="16.04.2025">
+                    <img src="assets/diary/2025-04-16.jpg" width="682" height="1024" alt="Лист арт-дневника, 16.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>16.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-15a.jpg" data-lightbox data-caption="15.04.2025">
+                    <img src="assets/diary/2025-04-15a.jpg" width="576" height="1024" alt="Лист арт-дневника, 15.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>15.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-15b.jpg" data-lightbox data-caption="15.04.2025">
+                    <img src="assets/diary/2025-04-15b.jpg" width="708" height="1024" alt="Лист арт-дневника, 15.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>15.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-14.jpg" data-lightbox data-caption="14.04.2025">
+                    <img src="assets/diary/2025-04-14.jpg" width="733" height="1024" alt="Лист арт-дневника, 14.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>14.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-13.jpg" data-lightbox data-caption="13.04.2025">
+                    <img src="assets/diary/2025-04-13.jpg" width="713" height="1024" alt="Лист арт-дневника, 13.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>13.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-12.jpg" data-lightbox data-caption="12.04.2025">
+                    <img src="assets/diary/2025-04-12.jpg" width="865" height="1024" alt="Лист арт-дневника, 12.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>12.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-11.jpg" data-lightbox data-caption="11.04.2025">
+                    <img src="assets/diary/2025-04-11.jpg" width="672" height="1024" alt="Лист арт-дневника, 11.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>11.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-10.jpg" data-lightbox data-caption="10.04.2025">
+                    <img src="assets/diary/2025-04-10.jpg" width="576" height="1024" alt="Лист арт-дневника, 10.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>10.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-05.jpg" data-lightbox data-caption="05.04.2025">
+                    <img src="assets/diary/2025-04-05.jpg" width="1024" height="576" alt="Лист арт-дневника, 05.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>05.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-03a.jpg" data-lightbox data-caption="03.04.2025">
+                    <img src="assets/diary/2025-04-03a.jpg" width="859" height="1024" alt="Лист арт-дневника, 03.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>03.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-03b.jpg" data-lightbox data-caption="03.04.2025">
+                    <img src="assets/diary/2025-04-03b.jpg" width="720" height="1024" alt="Лист арт-дневника, 03.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>03.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-02a.jpg" data-lightbox data-caption="02.04.2025">
+                    <img src="assets/diary/2025-04-02a.jpg" width="576" height="1024" alt="Лист арт-дневника, 02.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>02.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-02b.jpg" data-lightbox data-caption="02.04.2025">
+                    <img src="assets/diary/2025-04-02b.jpg" width="576" height="1024" alt="Лист арт-дневника, 02.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>02.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-04-01.jpg" data-lightbox data-caption="01.04.2025">
+                    <img src="assets/diary/2025-04-01.jpg" width="762" height="1024" alt="Лист арт-дневника, 01.04.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>01.04.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-03-31.jpg" data-lightbox data-caption="31.03.2025">
+                    <img src="assets/diary/2025-03-31.jpg" width="576" height="1024" alt="Лист арт-дневника, 31.03.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>31.03.2025</span></figcaption>
+                </figure>
+                <figure class="tile">
+                  <a href="assets/diary/2025-03-30.jpg" data-lightbox data-caption="30.03.2025">
+                    <img src="assets/diary/2025-03-30.jpg" width="576" height="1024" alt="Лист арт-дневника, 30.03.2025" loading="lazy" />
+                  </a>
+                  <figcaption class="tile__caption"><span>30.03.2025</span></figcaption>
+                </figure>
+              </div>
+              <button type="button" class="btn btn--secondary" data-more-toggle hidden aria-expanded="false">Показать ещё</button>
             </div>
           </div>
         </div>
@@ -856,11 +1300,15 @@
 
     <div class="lightbox" data-lightbox-root hidden>
       <button type="button" class="lightbox__close round-btn" aria-label="Закрыть">×</button>
-      <img alt="" />
-      <p class="lightbox__caption" data-lightbox-caption></p>
+      <button type="button" class="lightbox__nav round-btn" data-lightbox-prev aria-label="Предыдущая работа">←</button>
+      <figure class="lightbox__figure">
+        <img alt="" />
+        <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+      </figure>
+      <button type="button" class="lightbox__nav round-btn" data-lightbox-next aria-label="Следующая работа">→</button>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=lightbox2"></script>
     <script src="data/works.js"></script>
     <script src="js/cart.js"></script>
   </body>
