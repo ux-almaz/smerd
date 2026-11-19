@@ -29,8 +29,9 @@ document.querySelectorAll("[data-more]").forEach((block) => {
   const items = [...block.querySelectorAll(".tile")];
   const button = block.querySelector("[data-more-toggle]");
   const desktopLimit = Number(block.dataset.moreLimit || 6);
+  const mobileLimit = 6;
   const narrow = window.matchMedia("(max-width: 760px)");
-  if (!button || items.length <= Math.min(3, desktopLimit)) return;
+  if (!button || items.length <= Math.min(desktopLimit, mobileLimit)) return;
 
   const plural = (n, one, few, many) => {
     const mod10 = n % 10;
@@ -40,7 +41,7 @@ document.querySelectorAll("[data-more]").forEach((block) => {
     return many;
   };
 
-  const limit = () => (narrow.matches ? Math.min(3, desktopLimit) : desktopLimit);
+  const limit = () => (narrow.matches ? mobileLimit : desktopLimit);
   let open = false;
 
   const render = () => {

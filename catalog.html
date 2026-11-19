@@ -8,7 +8,7 @@
       name="description"
       content="Каталог картин Ольги Смердовой: живопись маслом, триптихи и диптихи. Заказ работ и картин по индивидуальному сюжету."
     />
-    <link rel="stylesheet" href="css/styles.css?v=lightbox" />
+    <link rel="stylesheet" href="css/styles.css?v=cart-icon" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -27,10 +27,12 @@
                 <a href="index.html#drawing">Рисунок</a>
                 <a href="index.html#about">Обо мне</a>
                 <a href="index.html#reviews">Отзывы</a>
-                <a class="nav__contact" href="#order">Заказать ↗</a>
               </nav>
-              <button type="button" class="nav__cart" data-cart-open>
-                <span>Корзина</span>
+              <button type="button" class="nav__cart" data-cart-open aria-label="Корзина">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6.4 8.5h11.2l-.9 11.1a1.6 1.6 0 0 1-1.6 1.4H8.9a1.6 1.6 0 0 1-1.6-1.4L6.4 8.5Z"/>
+                  <path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/>
+                </svg>
                 <span class="nav__cart-count" data-cart-count hidden>0</span>
               </button>
               <button
@@ -212,7 +214,10 @@
             <div class="footer__meta">
               <a class="brand brand--muted" href="index.html">
                 <img class="mark" src="assets/accent.svg" alt="" width="7" height="7" />
-                <span>SMERD.ART · Ольга Смердова</span>
+                <span class="brand__lines">
+                  <span>SMERD.ART</span>
+                  <span>Самозанятый · Смердова Ольга Сергеевна · ИНН 772394505355</span>
+                </span>
               </a>
               <nav class="footer__legal" aria-label="Документы">
                 <a href="privacy.html">Конфиденциальность</a>
@@ -275,7 +280,6 @@
         <div class="menu__item"><a href="index.html#about" style="--i: 3">Обо мне</a></div>
         <div class="menu__item"><a href="index.html#reviews" style="--i: 4">Отзывы</a></div>
         <div class="menu__item"><button type="button" data-cart-open style="--i: 5">Корзина</button></div>
-        <div class="menu__item"><a href="#order" style="--i: 6">Заказать ↗</a></div>
       </nav>
       <div class="inner menu__foot">
         <p>© 2026 Ольга Смердова</p>
@@ -294,7 +298,7 @@
       <button type="button" class="lightbox__nav round-btn" data-lightbox-next aria-label="Следующая работа">→</button>
     </div>
 
-    <script src="js/main.js?v=lightbox2"></script>
+    <script src="js/main.js?v=grid-m"></script>
     <script src="js/catalog.js"></script>
     <script src="data/works.js"></script>
     <script src="js/cart.js"></script>
