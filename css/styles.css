@@ -1478,6 +1478,16 @@ figure.tile {
 
 .legal__doc a { color: var(--accent); }
 
+.legal__doc a.btn,
+.legal__doc a.btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.legal__layout--plain {
+  grid-template-columns: minmax(0, 760px);
+}
+
 .legal__meta { color: var(--muted); }
 
 .about {
