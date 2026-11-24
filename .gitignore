@@ -4,3 +4,6 @@ desktop.ini
 .vercel
 node_modules
 api/robokassa.local.json
+studio/.env
+studio/dist
+.sanity

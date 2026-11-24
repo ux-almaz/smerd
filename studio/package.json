@@ -1,0 +1,21 @@
+{
+  "name": "smerd-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "node scripts/deploy.mjs",
+    "import": "node scripts/import.mjs",
+    "import:dry": "node scripts/import.mjs --dry-run"
+  },
+  "dependencies": {
+    "@sanity/client": "^8.17.0",
+    "@sanity/vision": "^6.24.0",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.24.0",
+    "styled-components": "^6.1.19"
+  }
+}

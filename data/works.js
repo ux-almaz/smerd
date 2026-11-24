@@ -1,3 +1,4 @@
+// Цены для корзины и Robokassa. Ключи — cartId в Sanity, их не переименовывают.
 (function (root, factory) {
   const api = factory();
   if (typeof module === "object" && module.exports) module.exports = api;
